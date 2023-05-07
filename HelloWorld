@@ -1,0 +1,20 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+template <typename T>
+DisplayContents (const T& contents)
+{
+  for (auto element = contents.cbegin(); element != contents.cend(); ++ element)
+    cout << *element << ' ';
+    
+  cout << endl;
+}
+
+int main()
+{
+  string str1 = "Hello World.";
+  DisplayContents(str1);
+  
+  return 0;
+}
